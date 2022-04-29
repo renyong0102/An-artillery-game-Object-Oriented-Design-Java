@@ -1,8 +1,13 @@
 package main;
 
 import entity.*;
-import javax.swing.*;
-import java.awt.*;
+
+import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Font;
 
 public class GamePanel extends JPanel implements Runnable{
     public int gameState;
@@ -131,12 +136,8 @@ public class GamePanel extends JPanel implements Runnable{
                 drawLetter(g2, "Instructions:", Color.RED, 12, 200,20, "TimesRoman");
                 drawLetter(g2, "[W] UP [S] DOWN [A] LEFT [D] RIGHT [SPACE] ATTACK",
                         Color.RED, 12, 200,33, "TimesRoman");
-                drawLetter(g2, "[G] POWER UP [H] POWER DOWN", Color.RED, 12, 200,46, "TimesRoman");
+                drawLetter(g2, "[H] POWER UP [G] POWER DOWN", Color.RED, 12, 200,46, "TimesRoman");
                 drawLetter(g2, "[UP] ANGLE UP [DOWN] ANGLE DOWN", Color.RED, 12, 200,59, "TimesRoman");
-
-//                drawLetter(g2, "" + fire.angle, Color.BLACK, 30, 70, 37);
-//                drawLetter(g2, "" + fire.speed, Color.BLACK, 30, 70, 80);
-//                drawLetter(g2, "" + count, Color.BLACK, 50, 700, 100);
 
                 if (Math.abs(fire.x - monster.x) < 30 && Math.abs(fire.y - monster.y) < 30) {
                     monster = new Blood(this);
