@@ -133,11 +133,11 @@ public class GamePanel extends JPanel implements Runnable{
                 drawLetter(g2, String.valueOf(fire.angle), Color.BLACK, 30, 100,60, "Algerian");
                 drawLetter(g2, String.valueOf(fire.speed), Color.BLACK, 30, 100,120, "Algerian");
                 drawLetter(g2, String.valueOf(count), Color.BLACK, 50, 700,100, "Algerian");
-                drawLetter(g2, "Instructions:", Color.RED, 12, 200,20, "TimesRoman");
+                drawLetter(g2, "Instructions:", Color.BLACK, 18, 200,20, "TimesRoman");
                 drawLetter(g2, "[W] UP [S] DOWN [A] LEFT [D] RIGHT [SPACE] ATTACK",
-                        Color.RED, 12, 200,33, "TimesRoman");
-                drawLetter(g2, "[H] POWER UP [G] POWER DOWN", Color.RED, 12, 200,46, "TimesRoman");
-                drawLetter(g2, "[UP] ANGLE UP [DOWN] ANGLE DOWN", Color.RED, 12, 200,59, "TimesRoman");
+                        Color.BLACK, 12, 200,33, "TimesRoman");
+                drawLetter(g2, "[H] POWER UP [G] POWER DOWN", Color.BLACK, 12, 200,46, "TimesRoman");
+                drawLetter(g2, "[UP] ANGLE UP [DOWN] ANGLE DOWN", Color.BLACK, 12, 200,59, "TimesRoman");
 
                 if (Math.abs(fire.x - monster.x) < 30 && Math.abs(fire.y - monster.y) < 30) {
                     monster = new Blood(this);
