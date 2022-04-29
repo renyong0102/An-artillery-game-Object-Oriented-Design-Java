@@ -13,8 +13,8 @@ public class Monster extends Entity {
         speed = 2;
         getImage();
         Random random = new Random();
-        x = random.nextInt(500,600);
-        y = random.nextInt(300,400);
+        x = random.nextInt(400,600);
+        y = random.nextInt(200,400);
     }
 
     public  void getImage(){

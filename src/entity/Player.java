@@ -35,19 +35,19 @@ public class Player extends Entity {
 
     //60 times per second
     public void update(){
-        if(keyH.upPressed){
+        if(keyH.upPressed && y > 300){
             direction = "up";
             y -= speed;
         }
-        else if(keyH.downPressed){
+        else if(keyH.downPressed && y < 400){
             direction = "down";
             y += speed;
         }
-        else if(keyH.leftPressed){
+        else if(keyH.leftPressed && x > 20){
             direction = "left";
             x -= speed;
         }
-        else if(keyH.rightPressed) {
+        else if(keyH.rightPressed && x < 300) {
             direction = "right";
             x += speed;
         }
@@ -101,6 +101,6 @@ public class Player extends Entity {
             }
                 break;
         }
-        g2.drawImage(image, (int)x, (int)y, gp.TILE_SIZE , gp.TILE_SIZE , null);
+        g2.drawImage(image, (int) x, (int) y, gp.TILE_SIZE, gp.TILE_SIZE, null);
     }
 }
